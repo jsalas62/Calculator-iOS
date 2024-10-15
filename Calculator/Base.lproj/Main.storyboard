@@ -1,0 +1,992 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kpc-LG-rBp">
+    <device id="retina6_12" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="6PG-Cb-3B6">
+            <objects>
+                <viewController id="Gxt-9B-1CJ" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a2e-Zy-ob4">
+                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="j0y-KB-G9B">
+                                <rect key="frame" x="79" y="-520.66666666666663" width="694" height="872.66666666666663"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="QGK-Rk-1mh">
+                                        <rect key="frame" x="0.0" y="0.0" width="694" height="158.66666666666666"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g39-Uj-ZpX" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="158.66666666666666" height="158.66666666666666"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="g39-Uj-ZpX" secondAttribute="height" multiplier="1:1" id="3F6-cd-v04"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="AC">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="limpiarPresionado:" destination="Gxt-9B-1CJ" eventType="touchUpInside" id="wUJ-J5-po2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2P-Dv-7zl" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="178.66666666666669" y="0.0" width="158.33333333333331" height="158.66666666666666"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="z2P-Dv-7zl" secondAttribute="height" multiplier="1:1" id="XbJ-QW-BwT"/>
+                                                    <constraint firstAttribute="width" secondItem="z2P-Dv-7zl" secondAttribute="height" multiplier="1:1" id="h5m-84-Jy4"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="+/-">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="alternarSignoPresionado:" destination="Gxt-9B-1CJ" eventType="touchUpInside" id="yEc-yr-y9y"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rut-Tb-Eu9" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="357" y="0.0" width="158.66666666666663" height="158.66666666666666"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="rut-Tb-Eu9" secondAttribute="height" multiplier="1:1" id="SHF-Pg-U2N"/>
+                                                    <constraint firstAttribute="width" secondItem="rut-Tb-Eu9" secondAttribute="height" multiplier="1:1" id="t3u-tC-TYK"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="%">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="porcentajePresionado:" destination="Gxt-9B-1CJ" eventType="touchUpInside" id="yVN-Hn-hDG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OR-lB-dp6" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="535.66666666666663" y="0.0" width="158.33333333333337" height="158.66666666666666"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="1OR-lB-dp6" secondAttribute="height" multiplier="1:1" id="Nms-Oo-HvJ"/>
+                                                    <constraint firstAttribute="width" secondItem="1OR-lB-dp6" secondAttribute="height" multiplier="1:1" id="QE4-Ww-ouu"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="÷">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="dividirPresionado:" destination="Gxt-9B-1CJ" eventType="touchUpInside" id="o5E-gq-mTw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YPr-Ox-mre">
+                                        <rect key="frame" x="0.0" y="178.66666666666663" width="694" height="158.33333333333337"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hp0-bQ-9qU" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="158.66666666666666" height="158.33333333333334"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Hp0-bQ-9qU" secondAttribute="height" multiplier="1:1" id="aHl-kG-wC4"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="7">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="numeroPresionado:" destination="Gxt-9B-1CJ" eventType="touchUpInside" id="V09-7X-K6A"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYf-AR-QnI" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="178.66666666666669" y="0.0" width="158.33333333333331" height="158.33333333333334"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="zYf-AR-QnI" secondAttribute="height" multiplier="1:1" id="FSj-eU-X32"/>
+                                                    <constraint firstAttribute="width" secondItem="zYf-AR-QnI" secondAttribute="height" multiplier="1:1" id="piR-c4-VwO"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="8">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="numeroPresionado:" destination="Gxt-9B-1CJ" eventType="touchUpInside" id="EJr-X4-1gH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DB6-aN-dS2" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="357" y="0.0" width="158.66666666666663" height="158.33333333333334"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="DB6-aN-dS2" secondAttribute="height" multiplier="1:1" id="N17-L2-sZa"/>
+                                                    <constraint firstAttribute="width" secondItem="DB6-aN-dS2" secondAttribute="height" multiplier="1:1" id="k8E-3p-4fl"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="9">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="numeroPresionado:" destination="Gxt-9B-1CJ" eventType="touchUpInside" id="TnD-wi-feP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYB-ag-1nL" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="535.66666666666663" y="0.0" width="158.33333333333337" height="158.33333333333334"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="yYB-ag-1nL" secondAttribute="height" multiplier="1:1" id="I2v-b3-ArY"/>
+                                                    <constraint firstAttribute="width" secondItem="yYB-ag-1nL" secondAttribute="height" multiplier="1:1" id="oaP-5S-aj4"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="x">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="multiplicarPresionado:" destination="Gxt-9B-1CJ" eventType="touchUpInside" id="BgY-HT-gzm"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kLE-7e-oaY">
+                                        <rect key="frame" x="0.0" y="357" width="694" height="158.66666666666663"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YsL-sB-3ce" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="158.66666666666666" height="158.66666666666666"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="YsL-sB-3ce" secondAttribute="height" multiplier="1:1" id="ZZS-6b-AY2"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="4">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="numeroPresionado:" destination="Gxt-9B-1CJ" eventType="touchUpInside" id="bsH-w0-9KJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGS-NR-oXo" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="178.66666666666669" y="0.0" width="158.33333333333331" height="158.66666666666666"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="YGS-NR-oXo" secondAttribute="height" multiplier="1:1" id="2L4-be-FIJ"/>
+                                                    <constraint firstAttribute="width" secondItem="YGS-NR-oXo" secondAttribute="height" multiplier="1:1" id="hSR-lD-64w"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="5">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="numeroPresionado:" destination="Gxt-9B-1CJ" eventType="touchUpInside" id="Q8y-U2-hWS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNw-Zy-5VM" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="357" y="0.0" width="158.66666666666663" height="158.66666666666666"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="zNw-Zy-5VM" secondAttribute="height" multiplier="1:1" id="IJK-4P-6IU"/>
+                                                    <constraint firstAttribute="width" secondItem="zNw-Zy-5VM" secondAttribute="height" multiplier="1:1" id="WTi-RK-rmf"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="6">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="numeroPresionado:" destination="Gxt-9B-1CJ" eventType="touchUpInside" id="75s-nf-Yqs"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADE-dG-3AE" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="535.66666666666663" y="0.0" width="158.33333333333337" height="158.66666666666666"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="ADE-dG-3AE" secondAttribute="height" multiplier="1:1" id="INF-8i-hgM"/>
+                                                    <constraint firstAttribute="width" secondItem="ADE-dG-3AE" secondAttribute="height" multiplier="1:1" id="M1u-lm-jFx"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="-">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="restarPresionado:" destination="Gxt-9B-1CJ" eventType="touchUpInside" id="fOc-bE-lrO"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="H3M-b5-qjS">
+                                        <rect key="frame" x="0.0" y="535.66666666666663" width="694" height="158.66666666666663"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wU-UH-Rv3" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="158.66666666666666" height="158.66666666666666"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="5wU-UH-Rv3" secondAttribute="height" multiplier="1:1" id="EfK-Sk-drC"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="1">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="numeroPresionado:" destination="Gxt-9B-1CJ" eventType="touchUpInside" id="9TS-KV-39K"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRb-Gl-cwK" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="178.66666666666669" y="0.0" width="158.33333333333331" height="158.66666666666666"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="DRb-Gl-cwK" secondAttribute="height" multiplier="1:1" id="2bC-DZ-FMg"/>
+                                                    <constraint firstAttribute="width" secondItem="DRb-Gl-cwK" secondAttribute="height" multiplier="1:1" id="ke5-et-Q6H"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="2">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="numeroPresionado:" destination="Gxt-9B-1CJ" eventType="touchUpInside" id="5R6-6W-ffn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWh-nX-DZC" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="357" y="0.0" width="158.66666666666663" height="158.66666666666666"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="qWh-nX-DZC" secondAttribute="height" multiplier="1:1" id="Dn2-VJ-MaU"/>
+                                                    <constraint firstAttribute="width" secondItem="qWh-nX-DZC" secondAttribute="height" multiplier="1:1" id="XU1-h5-8Xo"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="3">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="numeroPresionado:" destination="Gxt-9B-1CJ" eventType="touchUpInside" id="Xpd-hx-g0e"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9N-Mz-MX1" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="535.66666666666663" y="0.0" width="158.33333333333337" height="158.66666666666666"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="j9N-Mz-MX1" secondAttribute="height" multiplier="1:1" id="ctC-qb-Dlt"/>
+                                                    <constraint firstAttribute="width" secondItem="j9N-Mz-MX1" secondAttribute="height" multiplier="1:1" id="jUf-s2-U9D"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="+">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="sumarPresionado:" destination="Gxt-9B-1CJ" eventType="touchUpInside" id="g73-Xp-nec"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ipy-Sf-7VU">
+                                        <rect key="frame" x="0.0" y="714.33333333333326" width="694" height="158.33333333333337"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0qf-wX-JFm">
+                                                <rect key="frame" x="0.0" y="0.0" width="337" height="158.33333333333334"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4O-5W-0aZ" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="337" height="158.33333333333334"/>
+                                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="  0">
+                                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="numeroPresionado:" destination="Gxt-9B-1CJ" eventType="touchUpInside" id="tdj-J1-QQ5"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3Of-Es-4rM">
+                                                <rect key="frame" x="357" y="0.0" width="337" height="158.33333333333334"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ts-7n-pWo" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="158.66666666666666" height="158.33333333333334"/>
+                                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="3ts-7n-pWo" secondAttribute="height" multiplier="1:1" id="c9e-4U-BJW"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title=".">
+                                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="puntoPresionado:" destination="Gxt-9B-1CJ" eventType="touchUpInside" id="mLe-Lo-avr"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wy2-UK-yVI" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="178.66666666666663" y="0.0" width="158.33333333333337" height="158.33333333333334"/>
+                                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Wy2-UK-yVI" secondAttribute="height" multiplier="1:1" id="wYc-qy-nV7"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="=">
+                                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="igualPresionado:" destination="Gxt-9B-1CJ" eventType="touchUpInside" id="f9x-C6-rsn"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="gZC-kE-DEN">
+                                <rect key="frame" x="79" y="-642.33333333333337" width="694" height="101.66666666666663"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="85"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5xw-0x-1VQ"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5xw-0x-1VQ" firstAttribute="trailing" secondItem="gZC-kE-DEN" secondAttribute="trailing" constant="20" id="5iF-sF-IkI"/>
+                            <constraint firstItem="5xw-0x-1VQ" firstAttribute="bottom" secondItem="j0y-KB-G9B" secondAttribute="bottom" constant="20" id="8DH-rb-97R"/>
+                            <constraint firstItem="j0y-KB-G9B" firstAttribute="leading" secondItem="5xw-0x-1VQ" secondAttribute="leading" constant="20" id="933-ub-g3A"/>
+                            <constraint firstItem="j0y-KB-G9B" firstAttribute="top" secondItem="gZC-kE-DEN" secondAttribute="bottom" constant="20" id="D0c-zq-TvS"/>
+                            <constraint firstItem="5xw-0x-1VQ" firstAttribute="trailing" secondItem="j0y-KB-G9B" secondAttribute="trailing" constant="20" id="oqi-3i-6Gb"/>
+                            <constraint firstItem="gZC-kE-DEN" firstAttribute="leading" secondItem="5xw-0x-1VQ" secondAttribute="leading" constant="20" id="oz3-7L-73n"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="botonAC" destination="g39-Uj-ZpX" id="U4z-Eg-gmY"/>
+                        <outlet property="etiquetaDisplay" destination="gZC-kE-DEN" id="qcP-tt-gLS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dMc-Wz-A48" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-886" y="-1906"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="SnX-eL-64j">
+            <objects>
+                <viewController id="Kpc-LG-rBp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DUf-6X-vnM">
+                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="nGb-vh-9t7">
+                                <rect key="frame" x="64" y="80.333333333333343" width="724" height="291.66666666666663"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Hbt-Mc-Nf5">
+                                        <rect key="frame" x="0.0" y="0.0" width="724" height="54.333333333333336"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8aW-1d-CIo" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="8aW-1d-CIo" secondAttribute="height" multiplier="1.25:1" id="63r-Ts-0x2"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="("/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AO7-cm-s3H" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="73" y="0.0" width="67.666666666666686" height="54.333333333333336"/>
+                                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="AO7-cm-s3H" secondAttribute="height" multiplier="1.25:1" id="9id-al-dNt"/>
+                                                    <constraint firstAttribute="width" secondItem="AO7-cm-s3H" secondAttribute="height" multiplier="1.25:1" id="pd0-Gj-47i"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=")"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXk-Ke-hyd" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="145.66666666666666" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="hXk-Ke-hyd" secondAttribute="height" multiplier="1.25:1" id="ENq-v9-vpo"/>
+                                                    <constraint firstAttribute="width" secondItem="hXk-Ke-hyd" secondAttribute="height" multiplier="1.25:1" id="y5T-eK-44e"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="mc"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Zl-pO-X3C" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="218.66666666666669" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="3Zl-pO-X3C" secondAttribute="height" multiplier="1.25:1" id="Oit-PE-jQY"/>
+                                                    <constraint firstAttribute="width" secondItem="3Zl-pO-X3C" secondAttribute="height" multiplier="1.25:1" id="aYC-XI-Yu0"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="m+"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90H-zK-BUf" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="291.66666666666669" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="90H-zK-BUf" secondAttribute="height" multiplier="1.25:1" id="6xA-aZ-XUI"/>
+                                                    <constraint firstAttribute="width" secondItem="90H-zK-BUf" secondAttribute="height" multiplier="1.25:1" id="7yF-t4-eUx"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="m-"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41A-XH-4av" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="364.66666666666669" y="0.0" width="67.666666666666686" height="54.333333333333336"/>
+                                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="41A-XH-4av" secondAttribute="height" multiplier="1.25:1" id="SS2-o6-fWh"/>
+                                                    <constraint firstAttribute="width" secondItem="41A-XH-4av" secondAttribute="height" multiplier="1.25:1" id="dRz-9u-16R"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="mr"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ne-wL-AXd" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="437.33333333333331" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="7Ne-wL-AXd" secondAttribute="height" multiplier="1.25:1" id="4LC-5p-EMM"/>
+                                                    <constraint firstAttribute="width" secondItem="7Ne-wL-AXd" secondAttribute="height" multiplier="1.25:1" id="Dcj-xW-rZX"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="AC"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3R-Lr-qcc" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="510.33333333333337" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="b3R-Lr-qcc" secondAttribute="height" multiplier="1.25:1" id="FjP-rv-hRa"/>
+                                                    <constraint firstAttribute="width" secondItem="b3R-Lr-qcc" secondAttribute="height" multiplier="1.25:1" id="InN-tE-5Py"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="+/-"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fgn-Gq-vUS" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="583.33333333333337" y="0.0" width="67.666666666666629" height="54.333333333333336"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Fgn-Gq-vUS" secondAttribute="height" multiplier="1.25:1" id="5F8-qM-pkq"/>
+                                                    <constraint firstAttribute="width" secondItem="Fgn-Gq-vUS" secondAttribute="height" multiplier="1.25:1" id="9fG-sf-MkG"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="%"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULC-fN-IH2" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="656" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="ULC-fN-IH2" secondAttribute="height" multiplier="1.25:1" id="XKO-nn-Eml"/>
+                                                    <constraint firstAttribute="width" secondItem="ULC-fN-IH2" secondAttribute="height" multiplier="1.25:1" id="uTZ-qK-2HD"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="÷"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="x1l-nb-cOe">
+                                        <rect key="frame" x="0.0" y="59.333333333333329" width="724" height="54.333333333333329"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PcO-jf-xVt" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="PcO-jf-xVt" secondAttribute="height" multiplier="1.25:1" id="XD5-Gs-wmx"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="2nd"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbw-Zv-ckq" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="73" y="0.0" width="67.666666666666686" height="54.333333333333336"/>
+                                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="cbw-Zv-ckq" secondAttribute="height" multiplier="1.25:1" id="3OC-Pu-fQi"/>
+                                                    <constraint firstAttribute="width" secondItem="cbw-Zv-ckq" secondAttribute="height" multiplier="1.25:1" id="Ga7-yg-vdJ"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="x2"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mF8-db-y0f" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="145.66666666666666" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="mF8-db-y0f" secondAttribute="height" multiplier="1.25:1" id="fJ5-YN-n3z"/>
+                                                    <constraint firstAttribute="width" secondItem="mF8-db-y0f" secondAttribute="height" multiplier="1.25:1" id="oAy-BL-4ui"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="x3"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNP-CS-nES" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="218.66666666666669" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="wNP-CS-nES" secondAttribute="height" multiplier="1.25:1" id="7c2-Xc-ZXU"/>
+                                                    <constraint firstAttribute="width" secondItem="wNP-CS-nES" secondAttribute="height" multiplier="1.25:1" id="B9z-rQ-IsX"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="xy"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ls9-oo-jb6" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="291.66666666666669" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Ls9-oo-jb6" secondAttribute="height" multiplier="1.25:1" id="4VF-sI-4CN"/>
+                                                    <constraint firstAttribute="width" secondItem="Ls9-oo-jb6" secondAttribute="height" multiplier="1.25:1" id="t0e-dW-JO7"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="ex"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flD-3B-zkf" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="364.66666666666669" y="0.0" width="67.666666666666686" height="54.333333333333336"/>
+                                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="flD-3B-zkf" secondAttribute="height" multiplier="1.25:1" id="6WX-sp-WlJ"/>
+                                                    <constraint firstAttribute="width" secondItem="flD-3B-zkf" secondAttribute="height" multiplier="1.25:1" id="mhg-dk-G2i"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="10x"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTv-aH-ilI" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="437.33333333333331" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="gTv-aH-ilI" secondAttribute="height" multiplier="1.25:1" id="3TR-jL-m82"/>
+                                                    <constraint firstAttribute="width" secondItem="gTv-aH-ilI" secondAttribute="height" multiplier="1.25:1" id="7u1-31-5gF"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="7"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeL-du-SUd" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="510.33333333333337" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="oeL-du-SUd" secondAttribute="height" multiplier="1.25:1" id="2QT-pr-Sml"/>
+                                                    <constraint firstAttribute="width" secondItem="oeL-du-SUd" secondAttribute="height" multiplier="1.25:1" id="rgy-3r-wwY"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="8"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DlC-IN-BK3" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="583.33333333333337" y="0.0" width="67.666666666666629" height="54.333333333333336"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="DlC-IN-BK3" secondAttribute="height" multiplier="1.25:1" id="Rg4-Xb-yZq"/>
+                                                    <constraint firstAttribute="width" secondItem="DlC-IN-BK3" secondAttribute="height" multiplier="1.25:1" id="Sb3-9e-zrc"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="9"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8J-yh-q4E" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="656" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="t8J-yh-q4E" secondAttribute="height" multiplier="1.25:1" id="2NZ-ZB-492"/>
+                                                    <constraint firstAttribute="width" secondItem="t8J-yh-q4E" secondAttribute="height" multiplier="1.25:1" id="sVk-Ay-q2u"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="x"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ayz-Xg-mi6">
+                                        <rect key="frame" x="0.0" y="118.66666666666667" width="724" height="54.333333333333329"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nr3-J7-O00" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Nr3-J7-O00" secondAttribute="height" multiplier="1.25:1" id="cDi-Sk-nxS"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="1/x"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fS7-S8-e2x" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="73" y="0.0" width="67.666666666666686" height="54.333333333333336"/>
+                                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="fS7-S8-e2x" secondAttribute="height" multiplier="1.25:1" id="ubc-Pe-Skp"/>
+                                                    <constraint firstAttribute="width" secondItem="fS7-S8-e2x" secondAttribute="height" multiplier="1.25:1" id="xrW-5a-Hdk"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="√x"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRX-WG-p6a" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="145.66666666666666" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="BRX-WG-p6a" secondAttribute="height" multiplier="1.25:1" id="QXL-sF-htL"/>
+                                                    <constraint firstAttribute="width" secondItem="BRX-WG-p6a" secondAttribute="height" multiplier="1.25:1" id="R1b-AS-rvi"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="∛x"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rg4-jz-msp" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="218.66666666666669" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="rg4-jz-msp" secondAttribute="height" multiplier="1.25:1" id="MEc-ka-NBf"/>
+                                                    <constraint firstAttribute="width" secondItem="rg4-jz-msp" secondAttribute="height" multiplier="1.25:1" id="TMD-m2-kWV"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="y√x"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHY-oU-h3k" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="291.66666666666669" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="cHY-oU-h3k" secondAttribute="height" multiplier="1.25:1" id="CFP-0Y-CHy"/>
+                                                    <constraint firstAttribute="width" secondItem="cHY-oU-h3k" secondAttribute="height" multiplier="1.25:1" id="z34-OT-cjX"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="In"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SzU-Cz-Lua" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="364.66666666666669" y="0.0" width="67.666666666666686" height="54.333333333333336"/>
+                                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="SzU-Cz-Lua" secondAttribute="height" multiplier="1.25:1" id="4hH-D8-HbJ"/>
+                                                    <constraint firstAttribute="width" secondItem="SzU-Cz-Lua" secondAttribute="height" multiplier="1.25:1" id="WoW-TQ-ncL"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Log10"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gm-kP-NgO" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="437.33333333333331" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="7gm-kP-NgO" secondAttribute="height" multiplier="1.25:1" id="jnA-n1-wYp"/>
+                                                    <constraint firstAttribute="width" secondItem="7gm-kP-NgO" secondAttribute="height" multiplier="1.25:1" id="jos-qW-lfd"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="4"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlM-rQ-rte" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="510.33333333333337" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="XlM-rQ-rte" secondAttribute="height" multiplier="1.25:1" id="mxS-bX-ZoZ"/>
+                                                    <constraint firstAttribute="width" secondItem="XlM-rQ-rte" secondAttribute="height" multiplier="1.25:1" id="qXf-mV-Sy5"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="5"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gol-7o-0bE" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="583.33333333333337" y="0.0" width="67.666666666666629" height="54.333333333333336"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="gol-7o-0bE" secondAttribute="height" multiplier="1.25:1" id="Okt-Bc-URz"/>
+                                                    <constraint firstAttribute="width" secondItem="gol-7o-0bE" secondAttribute="height" multiplier="1.25:1" id="b23-Zg-T6V"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="6"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3B-i7-Ch6" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="656" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="k3B-i7-Ch6" secondAttribute="height" multiplier="1.25:1" id="2gr-Ga-UuD"/>
+                                                    <constraint firstAttribute="width" secondItem="k3B-i7-Ch6" secondAttribute="height" multiplier="1.25:1" id="Xo2-Lf-QwA"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="-"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zJy-km-jAA">
+                                        <rect key="frame" x="0.0" y="178" width="724" height="54.333333333333343"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WDA-KU-vyE" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="WDA-KU-vyE" secondAttribute="height" multiplier="1.25:1" id="JBH-8g-603"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="x!"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNu-Vp-w9Q" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="73" y="0.0" width="67.666666666666686" height="54.333333333333336"/>
+                                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="bNu-Vp-w9Q" secondAttribute="height" multiplier="1.25:1" id="5f7-9P-cQA"/>
+                                                    <constraint firstAttribute="width" secondItem="bNu-Vp-w9Q" secondAttribute="height" multiplier="1.25:1" id="Io2-aJ-G18"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="sin"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOf-w7-Ugw" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="145.66666666666666" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="TOf-w7-Ugw" secondAttribute="height" multiplier="1.25:1" id="ZJa-Nl-Nc5"/>
+                                                    <constraint firstAttribute="width" secondItem="TOf-w7-Ugw" secondAttribute="height" multiplier="1.25:1" id="iaQ-Hm-sRE"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="cos"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lin-TH-jDw" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="218.66666666666669" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Lin-TH-jDw" secondAttribute="height" multiplier="1.25:1" id="jwf-V7-oeI"/>
+                                                    <constraint firstAttribute="width" secondItem="Lin-TH-jDw" secondAttribute="height" multiplier="1.25:1" id="tjL-z1-iMd"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="tan"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4i6-aR-9B6" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="291.66666666666669" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="4i6-aR-9B6" secondAttribute="height" multiplier="1.25:1" id="IUW-bs-ZRO"/>
+                                                    <constraint firstAttribute="width" secondItem="4i6-aR-9B6" secondAttribute="height" multiplier="1.25:1" id="a6o-QT-5i3"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="e"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mt9-I0-JMf" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="364.66666666666669" y="0.0" width="67.666666666666686" height="54.333333333333336"/>
+                                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Mt9-I0-JMf" secondAttribute="height" multiplier="1.25:1" id="CcX-1f-qUd"/>
+                                                    <constraint firstAttribute="width" secondItem="Mt9-I0-JMf" secondAttribute="height" multiplier="1.25:1" id="k50-b9-9cr"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="EE"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4EG-xd-RE4" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="437.33333333333331" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="4EG-xd-RE4" secondAttribute="height" multiplier="1.25:1" id="3cn-tq-2ch"/>
+                                                    <constraint firstAttribute="width" secondItem="4EG-xd-RE4" secondAttribute="height" multiplier="1.25:1" id="HtV-ej-4e5"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="1"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUq-Jb-vBX" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="510.33333333333337" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="TUq-Jb-vBX" secondAttribute="height" multiplier="1.25:1" id="0Sd-iS-GQw"/>
+                                                    <constraint firstAttribute="width" secondItem="TUq-Jb-vBX" secondAttribute="height" multiplier="1.25:1" id="LPr-14-feM"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="2"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFH-uL-Uu5" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="583.33333333333337" y="0.0" width="67.666666666666629" height="54.333333333333336"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="nFH-uL-Uu5" secondAttribute="height" multiplier="1.25:1" id="O0v-MP-Wco"/>
+                                                    <constraint firstAttribute="width" secondItem="nFH-uL-Uu5" secondAttribute="height" multiplier="1.25:1" id="bSx-hH-mub"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="3"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAO-sz-lph" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="656" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="PAO-sz-lph" secondAttribute="height" multiplier="1.25:1" id="ImF-aU-g2k"/>
+                                                    <constraint firstAttribute="width" secondItem="PAO-sz-lph" secondAttribute="height" multiplier="1.25:1" id="VR4-xW-kAr"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="+"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TXY-4A-LAN">
+                                        <rect key="frame" x="0.0" y="237.3333333333334" width="724" height="54.333333333333343"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oxw-sa-SCQ" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Oxw-sa-SCQ" secondAttribute="height" multiplier="1.25:1" id="IKn-Yh-hdU"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="📲"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0a-W3-Tf4" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="73" y="0.0" width="67.666666666666686" height="54.333333333333336"/>
+                                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="x0a-W3-Tf4" secondAttribute="height" multiplier="1.25:1" id="bel-MB-sRb"/>
+                                                    <constraint firstAttribute="width" secondItem="x0a-W3-Tf4" secondAttribute="height" multiplier="1.25:1" id="zmv-1r-BYS"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="sinh"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2F0-lc-vy9" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="145.66666666666666" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="2F0-lc-vy9" secondAttribute="height" multiplier="1.25:1" id="4eP-ez-XnT"/>
+                                                    <constraint firstAttribute="width" secondItem="2F0-lc-vy9" secondAttribute="height" multiplier="1.25:1" id="tuj-GI-srI"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="cosh"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kg0-nm-Rlk" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="218.66666666666669" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Kg0-nm-Rlk" secondAttribute="height" multiplier="1.25:1" id="RTe-MX-gsy"/>
+                                                    <constraint firstAttribute="width" secondItem="Kg0-nm-Rlk" secondAttribute="height" multiplier="1.25:1" id="zrV-lo-Uj0"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="tanh"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrf-uM-BRI" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="291.66666666666669" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="yrf-uM-BRI" secondAttribute="height" multiplier="1.25:1" id="AS7-Yt-gJ0"/>
+                                                    <constraint firstAttribute="width" secondItem="yrf-uM-BRI" secondAttribute="height" multiplier="1.25:1" id="teb-b1-yVT"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="π"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ut-gd-ZcK" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="364.66666666666669" y="0.0" width="67.666666666666686" height="54.333333333333336"/>
+                                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="1Ut-gd-ZcK" secondAttribute="height" multiplier="1.25:1" id="TTE-vj-Bph"/>
+                                                    <constraint firstAttribute="width" secondItem="1Ut-gd-ZcK" secondAttribute="height" multiplier="1.25:1" id="ZLC-ed-Xe5"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Deg"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmY-mV-WYe" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="437.33333333333331" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="zmY-mV-WYe" secondAttribute="height" multiplier="1.25:1" id="6tU-Ez-1WR"/>
+                                                    <constraint firstAttribute="width" secondItem="zmY-mV-WYe" secondAttribute="height" multiplier="1.25:1" id="SOl-u5-Ku3"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Rand"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQk-ke-p66" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="510.33333333333337" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="TQk-ke-p66" secondAttribute="height" multiplier="1.25:1" id="K1N-3q-rqL"/>
+                                                    <constraint firstAttribute="width" secondItem="TQk-ke-p66" secondAttribute="height" multiplier="1.25:1" id="WdR-za-YeA"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="0"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKG-w9-P6z" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="583.33333333333337" y="0.0" width="67.666666666666629" height="54.333333333333336"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="sKG-w9-P6z" secondAttribute="height" multiplier="1.25:1" id="7A9-Ar-jAw"/>
+                                                    <constraint firstAttribute="width" secondItem="sKG-w9-P6z" secondAttribute="height" multiplier="1.25:1" id="VZY-Yq-dWI"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="."/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNE-UM-WmG" customClass="OvalButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="656" y="0.0" width="68" height="54.333333333333336"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="HNE-UM-WmG" secondAttribute="height" multiplier="1.25:1" id="JPy-eb-5sP"/>
+                                                    <constraint firstAttribute="width" secondItem="HNE-UM-WmG" secondAttribute="height" multiplier="1.25:1" id="ftP-KV-KTh"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="="/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSH-5G-2he">
+                                <rect key="frame" x="766.33333333333337" y="28.333333333333329" width="21.666666666666629" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9nG-Qc-HST"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9nG-Qc-HST" firstAttribute="trailing" secondItem="nGb-vh-9t7" secondAttribute="trailing" constant="5" id="ACJ-yh-CGS"/>
+                            <constraint firstItem="nGb-vh-9t7" firstAttribute="leading" secondItem="9nG-Qc-HST" secondAttribute="leading" constant="5" id="JaK-jY-bDl"/>
+                            <constraint firstItem="9nG-Qc-HST" firstAttribute="bottom" secondItem="nGb-vh-9t7" secondAttribute="bottom" id="iCE-EJ-dn0"/>
+                            <constraint firstItem="zSH-5G-2he" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9nG-Qc-HST" secondAttribute="leading" symbolic="YES" id="lvU-ZR-Hgn"/>
+                            <constraint firstItem="9nG-Qc-HST" firstAttribute="trailing" secondItem="zSH-5G-2he" secondAttribute="trailing" constant="5" id="rYe-q0-1vB"/>
+                            <constraint firstItem="nGb-vh-9t7" firstAttribute="top" secondItem="zSH-5G-2he" secondAttribute="bottom" constant="10" id="zeQ-b6-emw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bYH-Hr-icb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-213.38028169014086" y="-1907.6335877862596"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
